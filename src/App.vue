@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <vueTagsInput :tags="tags" v-model="values"/>
+    <vueTagsInput
+      :tags="tags"
+      v-model="values"
+      :placeholder="place"/>
     {{values}}
   </div>
 </template>
@@ -12,10 +15,11 @@ export default {
   name: 'App',
   data() {
     return {
-      values: ['toto','titi'],
+      place: 'test',
+      values: ['toto', 'titi'],
       tags: [
         'toto', 'titi', 'tata', 'titie',
-      ]
+      ],
     };
   },
   components: {
@@ -25,4 +29,7 @@ export default {
 </script>
 
 <style>
+#app {
+  width: 400px;
+}
 </style>
